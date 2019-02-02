@@ -15,7 +15,7 @@ if [ ! -e $PACKAGE_FILE ]; then
     # Generate empty file if there is no lambda package. Terraform will build an actual package later on.
     # Note that hash value in the next plan is always different because of this empty file.
     # As a result, you always see another function and layer deployment even you did not change any code in source directory.
-    # This problem will be remained unless terraform allows us to update data value in plan
+    # This problem will be remained unless terraform allows us to update data value in plan.
     touch $PACKAGE_FILE
 fi
 # detect any code changes in source directory
