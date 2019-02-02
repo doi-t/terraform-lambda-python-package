@@ -3,7 +3,7 @@ Terraform module which builds AWS Lambda Functions or AWS Lambda Layers package.
 
 This module is for a person who considers a lambda function and layer is a part of infrastructure and wants to glue everything in [Terraform](https://www.terraform.io/). Please note that [Terraform is not intended to be a build tool](https://github.com/hashicorp/terraform/issues/8344#issuecomment-361014199).
 
-The module builds a package on your local during `terraform apply` when there is a change in source directory (except for [the first deployment](https://github.com/doi-t/terraform-lambda-python-package/issues/1)).
+The module builds a package on your local during `terraform apply` when there is a change in source directory (except for [the second deployment](https://github.com/doi-t/terraform-lambda-python-package/issues/1)).
 
 # Usage
 
