@@ -1,6 +1,6 @@
 locals {
-  build_dir    = "build"
-  packages_dir = "packages"
+  packages_dir = "${substr("${path.module}/packages", length(path.cwd) + 1, -1)}"
+  build_dir    = "${substr("${path.module}/build", length(path.cwd) + 1, -1)}"
   function_dir = "${local.packages_dir}/${var.package_name}"
   layer_dir    = "${local.packages_dir}/${var.package_name}/python"
 
