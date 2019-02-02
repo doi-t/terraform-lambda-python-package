@@ -7,7 +7,7 @@ locals {
   # A package directory that manages all source codes and its dependencies with requirements.txt
   package_source_dir = "${var.is_lambda_layers ? local.layer_dir : local.function_dir }"
   archive_source_dir = "${local.packages_dir}/${var.package_name}"
-  package_file_path  = "${local.archive_source_dir}/${var.package_name}.zip"
+  package_file_path  = "${local.packages_dir}/${var.package_name}.zip"
 }
 
 # Generate source code hash depending on package_file_path and source code in source directory
