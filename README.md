@@ -1,5 +1,5 @@
 # terraform-lambda-python-package
-Terraform module which builds AWS Lambda Functions or AWS Lambda Layers package.
+Terraform module which builds AWS Lambda Functions or AWS Lambda Layers package for Python runtime.
 
 This module is for a person who considers a lambda function and layer is a part of infrastructure and wants to glue everything in [Terraform](https://www.terraform.io/). Please note that [Terraform is not intended to be a build tool](https://github.com/hashicorp/terraform/issues/8344#issuecomment-361014199).
 
@@ -33,6 +33,10 @@ resource "aws_lambda_function" "your_example_function" {
 ```
 
 ## AWS Lambda Layers Package
+
+If you want to build AWS Lambda Layers package, enable `is_lambda_layers` to place libraries in one of the folders supported by Python runtime.
+
+Ref. https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html#configuration-layers-path
 
 ```hcl
 variable "your_layer_name" {
